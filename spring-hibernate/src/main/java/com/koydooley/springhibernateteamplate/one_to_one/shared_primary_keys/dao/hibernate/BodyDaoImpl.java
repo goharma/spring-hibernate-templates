@@ -9,6 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.koydooley.springhibernateteamplate.one_to_one.shared_primary_keys.dao.BodyDao;
 import com.koydooley.springhibernateteamplate.one_to_one.shared_primary_keys.domain.Body;
 
+/**
+ * 
+ * @author Koy
+ * Testing GIT
+ * Change from Project Explorer
+ */
 @Repository("bodyDao")
 @Transactional
 public class BodyDaoImpl implements BodyDao {
