@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.7-b01-. --><xs:schema xmlns:tns="http://www.approuter.com/schemas/2008/1/security" xmlns:ns1="http://www.approuter.com/schema/router/1000/security/03" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://www.approuter.com/schemas/2008/1/security">
+
+<xs:import namespace="http://www.approuter.com/schema/router/1000/security/03" schemaLocation="security2.xsd"></xs:import>
+
+<xs:element name="addRoleToRoleGroup" type="tns:addRoleToRoleGroup"></xs:element>
+
+<xs:element name="addRoleToRoleGroupResponse" type="tns:addRoleToRoleGroupResponse"></xs:element>
+
+<xs:element name="changePassword" type="tns:changePassword"></xs:element>
+
+<xs:element name="changePasswordResponse" type="tns:changePasswordResponse"></xs:element>
+
+<xs:element name="clearPrivileges" type="tns:clearPrivileges"></xs:element>
+
+<xs:element name="clearPrivilegesResponse" type="tns:clearPrivilegesResponse"></xs:element>
+
+<xs:element name="createRole" type="tns:createRole"></xs:element>
+
+<xs:element name="createRoleResponse" type="tns:createRoleResponse"></xs:element>
+
+<xs:element name="createUser" type="tns:createUser"></xs:element>
+
+<xs:element name="createUserResponse" type="tns:createUserResponse"></xs:element>
+
+<xs:element name="currentScope" type="tns:currentScope"></xs:element>
+
+<xs:element name="currentScopeResponse" type="tns:currentScopeResponse"></xs:element>
+
+<xs:element name="deleteRole" type="tns:deleteRole"></xs:element>
+
+<xs:element name="deleteRoleResponse" type="tns:deleteRoleResponse"></xs:element>
+
+<xs:element name="deleteUser" type="tns:deleteUser"></xs:element>
+
+<xs:element name="deleteUserResponse" type="tns:deleteUserResponse"></xs:element>
+
+<xs:element name="disableUser" type="tns:disableUser"></xs:element>
+
+<xs:element name="disableUserResponse" type="tns:disableUserResponse"></xs:element>
+
+<xs:element name="enableUser" type="tns:enableUser"></xs:element>
+
+<xs:element name="enableUserResponse" type="tns:enableUserResponse"></xs:element>
+
+<xs:element name="filterNewUsers" type="tns:filterNewUsers"></xs:element>
+
+<xs:element name="filterNewUsersResponse" type="tns:filterNewUsersResponse"></xs:element>
+
+<xs:element name="filterUsers" type="tns:filterUsers"></xs:element>
+
+<xs:element name="filterUsersResponse" type="tns:filterUsersResponse"></xs:element>
+
+<xs:element name="getGrantedRoles" type="tns:getGrantedRoles"></xs:element>
+
+<xs:element name="getGrantedRolesResponse" type="tns:getGrantedRolesResponse"></xs:element>
+
+<xs:element name="getImpliedRoles" type="tns:getImpliedRoles"></xs:element>
+
+<xs:element name="getImpliedRolesResponse" type="tns:getImpliedRolesResponse"></xs:element>
+
+<xs:element name="getKerberosRealm" type="tns:getKerberosRealm"></xs:element>
+
+<xs:element name="getKerberosRealmResponse" type="tns:getKerberosRealmResponse"></xs:element>
+
+<xs:element name="getKerberosServerName" type="tns:getKerberosServerName"></xs:element>
+
+<xs:element name="getKerberosServerNameResponse" type="tns:getKerberosServerNameResponse"></xs:element>
+
+<xs:element name="getLdapConfiguration" type="tns:getLdapConfiguration"></xs:element>
+
+<xs:element name="getLdapConfigurationResponse" type="tns:getLdapConfigurationResponse"></xs:element>
+
+<xs:element name="getRole" type="tns:getRole"></xs:element>
+
+<xs:element name="getRoleById" type="tns:getRoleById"></xs:element>
+
+<xs:element name="getRoleByIdResponse" type="tns:getRoleByIdResponse"></xs:element>
+
+<xs:element name="getRoleGroups" type="tns:getRoleGroups"></xs:element>
+
+<xs:element name="getRoleGroupsResponse" type="tns:getRoleGroupsResponse"></xs:element>
+
+<xs:element name="getRoleResponse" type="tns:getRoleResponse"></xs:element>
+
+<xs:element name="getRoleUsers" type="tns:getRoleUsers"></xs:element>
+
+<xs:element name="getRoleUsersResponse" type="tns:getRoleUsersResponse"></xs:element>
+
+<xs:element name="getRoles" type="tns:getRoles"></xs:element>
+
+<xs:element name="getRolesInRoleGroup" type="tns:getRolesInRoleGroup"></xs:element>
+
+<xs:element name="getRolesInRoleGroupResponse" type="tns:getRolesInRoleGroupResponse"></xs:element>
+
+<xs:element name="getRolesResponse" type="tns:getRolesResponse"></xs:element>
+
+<xs:element name="getScope" type="tns:getScope"></xs:element>
+
+<xs:element name="getScopeById" type="tns:getScopeById"></xs:element>
+
+<xs:element name="getScopeByIdResponse" type="tns:getScopeByIdResponse"></xs:element>
+
+<xs:element name="getScopeResponse" type="tns:getScopeResponse"></xs:element>
+
+<xs:element name="getScopesByParentId" type="tns:getScopesByParentId"></xs:element>
+
+<xs:element name="getScopesByParentIdResponse" type="tns:getScopesByParentIdResponse"></xs:element>
+
+<xs:element name="getUser" type="tns:getUser"></xs:element>
+
+<xs:element name="getUserById" type="tns:getUserById"></xs:element>
+
+<xs:element name="getUserByIdResponse" type="tns:getUserByIdResponse"></xs:element>
+
+<xs:element name="getUserResponse" type="tns:getUserResponse"></xs:element>
+
+<xs:element name="getUsers" type="tns:getUsers"></xs:element>
+
+<xs:element name="getUsersResponse" type="tns:getUsersResponse"></xs:element>
+
+<xs:element name="grantPrivilege" type="tns:grantPrivilege"></xs:element>
+
+<xs:element name="grantPrivilegeResponse" type="tns:grantPrivilegeResponse"></xs:element>
+
+<xs:element name="grantPrivileges" type="tns:grantPrivileges"></xs:element>
+
+<xs:element name="grantPrivilegesResponse" type="tns:grantPrivilegesResponse"></xs:element>
+
+<xs:element name="grantRole" type="tns:grantRole"></xs:element>
+
+<xs:element name="grantRoleResponse" type="tns:grantRoleResponse"></xs:element>
+
+<xs:element name="hasPrivilege" type="tns:hasPrivilege"></xs:element>
+
+<xs:element name="hasPrivilegeResponse" type="tns:hasPrivilegeResponse"></xs:element>
+
+<xs:element name="isRealmUser" type="tns:isRealmUser"></xs:element>
+
+<xs:element name="isRealmUserResponse" type="tns:isRealmUserResponse"></xs:element>
+
+<xs:element name="isUserEnabled" type="tns:isUserEnabled"></xs:element>
+
+<xs:element name="isUserEnabledResponse" type="tns:isUserEnabledResponse"></xs:element>
+
+<xs:element name="listAvailableActions" type="tns:listAvailableActions"></xs:element>
+
+<xs:element name="listAvailableActionsResponse" type="tns:listAvailableActionsResponse"></xs:element>
+
+<xs:element name="listGrantableRoles" type="tns:listGrantableRoles"></xs:element>
+
+<xs:element name="listGrantableRolesResponse" type="tns:listGrantableRolesResponse"></xs:element>
+
+<xs:element name="listPrivileges" type="tns:listPrivileges"></xs:element>
+
+<xs:element name="listPrivilegesResponse" type="tns:listPrivilegesResponse"></xs:element>
+
+<xs:element name="listRoles" type="tns:listRoles"></xs:element>
+
+<xs:element name="listRolesResponse" type="tns:listRolesResponse"></xs:element>
+
+<xs:element name="listUsers" type="tns:listUsers"></xs:element>
+
+<xs:element name="listUsersResponse" type="tns:listUsersResponse"></xs:element>
+
+<xs:element name="login" type="tns:login"></xs:element>
+
+<xs:element name="loginResponse" type="tns:loginResponse"></xs:element>
+
+<xs:element name="logout" type="tns:logout"></xs:element>
+
+<xs:element name="logoutResponse" type="tns:logoutResponse"></xs:element>
+
+<xs:element name="removeKerberosConfiguration" type="tns:removeKerberosConfiguration"></xs:element>
+
+<xs:element name="removeKerberosConfigurationResponse" type="tns:removeKerberosConfigurationResponse"></xs:element>
+
+<xs:element name="removeRoleFromRoleGroup" type="tns:removeRoleFromRoleGroup"></xs:element>
+
+<xs:element name="removeRoleFromRoleGroupResponse" type="tns:removeRoleFromRoleGroupResponse"></xs:element>
+
+<xs:element name="revokePrivilege" type="tns:revokePrivilege"></xs:element>
+
+<xs:element name="revokePrivilegeResponse" type="tns:revokePrivilegeResponse"></xs:element>
+
+<xs:element name="revokePrivileges" type="tns:revokePrivileges"></xs:element>
+
+<xs:element name="revokePrivilegesResponse" type="tns:revokePrivilegesResponse"></xs:element>
+
+<xs:element name="revokeRole" type="tns:revokeRole"></xs:element>
+
+<xs:element name="revokeRoleResponse" type="tns:revokeRoleResponse"></xs:element>
+
+<xs:element name="roleExists" type="tns:roleExists"></xs:element>
+
+<xs:element name="roleExistsResponse" type="tns:roleExistsResponse"></xs:element>
+
+<xs:element name="sessionId" nillable="true" type="xs:string"></xs:element>
+
+<xs:element name="setCurrentScope" type="tns:setCurrentScope"></xs:element>
+
+<xs:element name="setCurrentScopeById" type="tns:setCurrentScopeById"></xs:element>
+
+<xs:element name="setCurrentScopeByIdResponse" type="tns:setCurrentScopeByIdResponse"></xs:element>
+
+<xs:element name="setCurrentScopeResponse" type="tns:setCurrentScopeResponse"></xs:element>
+
+<xs:element name="setKerberosConfiguration" type="tns:setKerberosConfiguration"></xs:element>
+
+<xs:element name="setKerberosConfigurationResponse" type="tns:setKerberosConfigurationResponse"></xs:element>
+
+<xs:element name="setLdapConfiguration" type="tns:setLdapConfiguration"></xs:element>
+
+<xs:element name="setLdapConfigurationResponse" type="tns:setLdapConfigurationResponse"></xs:element>
+
+<xs:element name="updateRole" type="tns:updateRole"></xs:element>
+
+<xs:element name="updateRoleResponse" type="tns:updateRoleResponse"></xs:element>
+
+<xs:element name="updateUser" type="tns:updateUser"></xs:element>
+
+<xs:element name="updateUserResponse" type="tns:updateUserResponse"></xs:element>
+
+<xs:element name="userExists" type="tns:userExists"></xs:element>
+
+<xs:element name="userExistsResponse" type="tns:userExistsResponse"></xs:element>
+
+<xs:complexType name="grantPrivilege">
+<xs:sequence>
+<xs:element name="privilege" type="ns1:privilege" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grantPrivilegeResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="roleExists">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="roleExistsResponse">
+<xs:sequence>
+<xs:element name="roleExists" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filterUsers">
+<xs:sequence>
+<xs:element name="filter" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filterUsersResponse">
+<xs:sequence>
+<xs:element name="users" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isRealmUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isRealmUserResponse">
+<xs:sequence>
+<xs:element name="isRealmUser" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleUsers">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleUsersResponse">
+<xs:sequence>
+<xs:element name="users" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesInRoleGroup">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesInRoleGroupResponse">
+<xs:sequence>
+<xs:element name="roles" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="displayName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filterNewUsers">
+<xs:sequence>
+<xs:element name="filter" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="sinceDate" type="xs:dateTime" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="filterNewUsersResponse">
+<xs:sequence>
+<xs:element name="users" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleGroups">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleGroupsResponse">
+<xs:sequence>
+<xs:element name="groups" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enableUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enableUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRole">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleResponse">
+<xs:sequence>
+<xs:element name="group" type="ns1:Group" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isUserEnabled">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isUserEnabledResponse">
+<xs:sequence>
+<xs:element name="isUserEnabled" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePassword">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="oldPassword" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="newPassword" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePasswordResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getImpliedRoles">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getImpliedRolesResponse">
+<xs:sequence>
+<xs:element name="roles" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="sessionId" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUsers">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUsersResponse">
+<xs:sequence>
+<xs:element name="users" type="ns1:User" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disableUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disableUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScopesByParentId">
+<xs:sequence>
+<xs:element name="parentScopeId" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScopesByParentIdResponse">
+<xs:sequence>
+<xs:element name="scopes" type="tns:scope" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="scope" abstract="true">
+<xs:sequence>
+<xs:element name="active" type="xs:boolean" form="unqualified"></xs:element>
+<xs:element name="category" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="description" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="displayName" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="index" type="xs:int" form="unqualified"></xs:element>
+<xs:element name="name" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="parentId" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="pool" type="xs:string" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="type" type="tns:scopeType" form="unqualified" minOccurs="0"></xs:element>
+<xs:element name="variableSizeLimit" type="xs:long" form="unqualified"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleById">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoleByIdResponse">
+<xs:sequence>
+<xs:element name="group" type="ns1:Group" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateRole">
+<xs:sequence>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="displayName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setCurrentScope">
+<xs:sequence>
+<xs:element name="scopeName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setCurrentScopeResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="currentScope">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="currentScopeResponse">
+<xs:sequence>
+<xs:element name="scope" type="tns:scope" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLdapConfiguration">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLdapConfigurationResponse">
+<xs:sequence>
+<xs:element name="ldapConfig" type="tns:ldapConfig" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ldapConfig">
+<xs:sequence>
+<xs:element name="active" type="xs:boolean"></xs:element>
+<xs:element name="adminGroupFilter" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="authenticationMode" type="tns:ldapAuthenticationMode" minOccurs="0"></xs:element>
+<xs:element name="authenticationType" type="tns:ldapAuthenticationType" minOccurs="0"></xs:element>
+<xs:element name="baseDN" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="host" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="port" type="xs:int"></xs:element>
+<xs:element name="principalDN" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="publisherGroupFilter" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="saslMechanism" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userContainerRDN" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userGroupFilter" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="userSearchFilter" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRole">
+<xs:sequence>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserResponse">
+<xs:sequence>
+<xs:element name="user" type="ns1:User" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setCurrentScopeById">
+<xs:sequence>
+<xs:element name="scopeId" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setCurrentScopeByIdResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setLdapConfiguration">
+<xs:sequence>
+<xs:element name="ldapConfig" type="tns:ldapConfig" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setLdapConfigurationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" form="unqualified"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokePrivilege">
+<xs:sequence>
+<xs:element name="privilege" type="ns1:privilege" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokePrivilegeResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeKerberosConfiguration">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeKerberosConfigurationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" form="unqualified"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRoleToRoleGroup">
+<xs:sequence>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="group" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRoleToRoleGroupResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasPrivilege">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="target" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="action" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hasPrivilegeResponse">
+<xs:sequence>
+<xs:element name="hasPrivilege" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="displayName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grantRole">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grantRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listAvailableActions">
+<xs:sequence>
+<xs:element name="target" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listAvailableActionsResponse">
+<xs:sequence>
+<xs:element name="actions" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserById">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserByIdResponse">
+<xs:sequence>
+<xs:element name="user" type="ns1:User" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKerberosRealm">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKerberosRealmResponse">
+<xs:sequence>
+<xs:element name="realm" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listRoles">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listRolesResponse">
+<xs:sequence>
+<xs:element name="roles" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGrantedRoles">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGrantedRolesResponse">
+<xs:sequence>
+<xs:element name="roles" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeRoleFromRoleGroup">
+<xs:sequence>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="group" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeRoleFromRoleGroupResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listGrantableRoles">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listGrantableRolesResponse">
+<xs:sequence>
+<xs:element name="roles" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listPrivileges">
+<xs:sequence>
+<xs:element name="targets" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="action" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listPrivilegesResponse">
+<xs:sequence>
+<xs:element name="privileges" type="ns1:privilege" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createRole">
+<xs:sequence>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="displayName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScopeById">
+<xs:sequence>
+<xs:element name="scopeId" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScopeByIdResponse">
+<xs:sequence>
+<xs:element name="scope" type="tns:scope" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScope">
+<xs:sequence>
+<xs:element name="scopeType" type="tns:scopeType" minOccurs="0"></xs:element>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="parentScopeId" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScopeResponse">
+<xs:sequence>
+<xs:element name="scope" type="tns:scope" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grantPrivileges">
+<xs:sequence>
+<xs:element name="privileges" type="ns1:privilege" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="grantPrivilegesResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKerberosServerName">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKerberosServerNameResponse">
+<xs:sequence>
+<xs:element name="serverName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokeRole">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="role" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokeRoleResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setKerberosConfiguration">
+<xs:sequence>
+<xs:element name="serverName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="realm" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setKerberosConfigurationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" form="unqualified"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userExists">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userExistsResponse">
+<xs:sequence>
+<xs:element name="userExists" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRoles">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesResponse">
+<xs:sequence>
+<xs:element name="roles" type="ns1:Group" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clearPrivileges">
+<xs:sequence>
+<xs:element name="target" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clearPrivilegesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" form="unqualified"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logout">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" form="unqualified"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listUsers">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listUsersResponse">
+<xs:sequence>
+<xs:element name="users" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokePrivileges">
+<xs:sequence>
+<xs:element name="privileges" type="ns1:privilege" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokePrivilegesResponse">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="scopeType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="GLOBAL"></xs:enumeration>
+<xs:enumeration value="TENANT"></xs:enumeration>
+<xs:enumeration value="ENV"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ldapAuthenticationMode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="compose"></xs:enumeration>
+<xs:enumeration value="search"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ldapAuthenticationType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="none"></xs:enumeration>
+<xs:enumeration value="simple"></xs:enumeration>
+<xs:enumeration value="sasl"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

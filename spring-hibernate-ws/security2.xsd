@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.7-b01-. --><xs:schema xmlns:tns="http://www.approuter.com/schema/router/1000/security/03" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://www.approuter.com/schema/router/1000/security/03">
+
+<xs:complexType name="privilege">
+<xs:sequence>
+<xs:element name="action" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="recipient" type="tns:principal" minOccurs="0"></xs:element>
+<xs:element name="target" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="principal">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="type" type="tns:principalType" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Group">
+<xs:sequence>
+<xs:element name="id" type="xs:string"></xs:element>
+<xs:element name="name" type="xs:string"></xs:element>
+<xs:element name="displayName" type="xs:string"></xs:element>
+<xs:element name="isActive" type="xs:boolean"></xs:element>
+<xs:element name="isMutable" type="xs:boolean"></xs:element>
+<xs:element name="isVisible" type="xs:boolean"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="member" type="tns:Member" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="createdTime" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="scopeId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="scopeType" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="groupType" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Member">
+<xs:sequence>
+<xs:element name="memberId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="groupId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:string"></xs:element>
+</xs:sequence>
+<xs:attribute name="type" type="xs:string"></xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="User">
+<xs:sequence>
+<xs:element name="id" type="xs:string"></xs:element>
+<xs:element name="name" type="xs:string"></xs:element>
+<xs:element name="encPasswd" type="xs:string"></xs:element>
+<xs:element name="displayName" type="xs:string"></xs:element>
+<xs:element name="isActive" type="xs:boolean"></xs:element>
+<xs:element name="isMutable" type="xs:boolean"></xs:element>
+<xs:element name="isVisible" type="xs:boolean"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="email" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="createdTime" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="lastLoginTime" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="lastFailedLoginTime" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="failedLoginCount" type="xs:int" default="0"></xs:element>
+<xs:element name="lastPasswordChangeTime" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="scopeId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="scopeType" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="defaultThirdPartyLibId" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="eulaAcceptedTime" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="principalType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="user"></xs:enumeration>
+<xs:enumeration value="group"></xs:enumeration>
+<xs:enumeration value="realm"></xs:enumeration>
+<xs:enumeration value="unknown"></xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
